@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopkeeper Page</title>
+    <style>
+        /* Basic styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        input[type="text"], input[type="email"], input[type="submit"], textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        .offers, .new {
+            margin-top: 20px;
+        }
+        .offer, .category {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Shopkeeper Page</h1>
+        <form id="shopkeeperForm">
+            <input type="text" id="shopkeeperName" placeholder="Shopkeeper Name">
+            <input type="text" id="shopName" placeholder="Shop Name">
+            <input type="email" id="email" placeholder="Email">
+            <input type="submit" value="Save Information">
+        </form>
+
+        <div class="offers">
+            <h2>Offers</h2>
+            <textarea id="offerText" placeholder="Enter your offer"></textarea>
+            <button onclick="addOffer()">Add Offer</button>
+            <div id="offersList"></div>
+        </div>
+
+        <div class="new">
+            <h2>New</h2>
+            <form id="newForm">
+                <input type="text" id="categoryName" placeholder="Category Name">
+                <input type="text" id="offerPercentage" placeholder="Offer Percentage">
+                <input type="submit" value="Add Category">
+            </form>
+            <div id="categoriesList"></div>
+        </div>
+    </div>
+    <script>
+        // Function to save shopkeeper information
+        function saveShopkeeperInfo() {
+            var shopkeeperName = document.getElementById('shopkeeperName').value;
+            var shopName = document.getElementById('shopName').value;
+            var email = document.getElementById('email').value;
+
+            // Save the information (You can use AJAX to send this data to the server)
+            console.log("Shopkeeper Name: " + shopkeeperName);
+            console.log("Shop Name: " + shopName);
+            console.log("Email: " + email);
+        }
+
+        // Function to add offer to profile
+        function addOffer() {
+            var offerText = document.getElementById('offerText').value;
+            if (offerText) {
+                var offerDiv = document.createElement('div');
+                offerDiv.className = "offer";
+                offerDiv.innerHTML = "<strong>Offer:</strong> " + offerText;
+                document.getElementById('offersList').appendChild(offerDiv);
+                document.getElementById('offerText').value = ''; // Clear the textarea
+            }
+        }
+
+        // Function to add category and offer percentage
+        function addCategory() {
+            var categoryName = document.getElementById('categoryName').value;
+            var offerPercentage = document.getElementById('offerPercentage').value;
+            if (categoryName && offerPercentage) {
+                var categoryDiv = document.createElement('div');
+                categoryDiv.className = "category";
+                categoryDiv.innerHTML = "<strong>Category:</strong> " + categoryName +
+                                        "<br><strong>Offer Percentage:</strong> " + offerPercentage + "%";
+                document.getElementById('categoriesList').appendChild(categoryDiv);
+                document.getElementById('categoryName').value = ''; // Clear the category name input
+                document.getElementById('offerPercentage').value = ''; // Clear the offer percentage input
+            }
+        }
+
+        // Event listener for form submissions
+        document.getElementById('shopkeeperForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form submission
+            saveShopkeeperInfo(); // Call function to save information
+        });
+
+        document.getElementById('newForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form submission
+            addCategory(); // Call function to add category and offer percentage
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wishlist</title>
+    <style>
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+h2 {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+  color: #333; /* Added color for better contrast */
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+}
+
+/* Enhanced item information styling */
+.item-info {
+  display: flex;
+  align-items: center;
+  width: 70%; /* Allocate space for image and details */
+}
+
+.item-image {
+  max-width: 100px;
+  margin-right: 20px;
+  border-radius: 5px; /* Add subtle border radius */
+}
+
+.item-details {
+  /* Group details for better organization (optional) */
+  display: flex;
+  flex-direction: column;
+}
+
+.item-details p {
+  margin-bottom: 5px; /* Add spacing between elements */
+}
+
+/* Improved button styling */
+.remove-button {
+  background-color: #ff5555;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out all; /* Added smooth transitions */
+}
+
+.remove-button:hover {
+  background-color: #ff3333;
+}
+
+/* Optional: Hover effect for list items */
+li:hover {
+  background-color: #f5f5f5; /* Subtle background change on hover */
+}
+  </style>
+</head>
+<body>
+
+    <h2>My Wishlist</h2>
+
+    <ul>
+        <li>
+            <div class="item-info">
+                <img src="item1.jpg" alt="Item 1" class="item-image">
+                <div>
+                    <p><strong>Item 1</strong></p>
+                    <p>Rs.150</p>
+                </div>
+            </div>
+            <button class="remove-button">Remove</button>
+        </li>
+        <li>
+            <div class="item-info">
+                <img src="item2.jpg" alt="Item 2" class="item-image">
+                <div>
+                    <p><strong>Item 2</strong></p>
+                    <p>Rs.299</p>
+                </div>
+            </div>
+            <button class="remove-button">Remove</button>
+        </li>
+        <!-- Add more wishlist items as needed -->
+    </ul>
+
+</body>
+</html>

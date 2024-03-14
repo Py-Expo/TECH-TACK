@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notifications</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 20px;
+            background-color: #f3f3f3;
+        }
+
+        h2 {
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+            color: #3498db;
+            text-transform: uppercase;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 20px;
+        }
+
+        .notification {
+            border: 2px solid #3498db;
+            padding: 15px;
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .title {
+            font-weight: bold;
+            color: #333;
+            font-size: 1.2em;
+        }
+
+        .description {
+            color: #555;
+            margin-top: 5px;
+        }
+
+        .timestamp {
+            color: #888;
+            font-size: 0.8em;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Notifications</h2>
+
+    <ul>
+        <li>
+            <div class="notification">
+                <p class="title">New Message Received</p>
+                <p class="description">You have a new message from John Doe.</p>
+                <p class="timestamp">Received on March 13, 2024 at 10:30 AM</p>
+            </div>
+        </li>
+        <li>
+            <div class="notification">
+                <p class="title">Event Reminder</p>
+                <p class="description">Reminder: Team meeting today at 2:00 PM.</p>
+                <p class="timestamp">Sent on March 12, 2024 at 3:45 PM</p>
+            </div>
+        </li>
+        <!-- Add more notifications as needed -->
+    </ul>
+
+</body>
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #0074cc;
+            padding: 10px;
+            text-align: center;
+            position: relative;
+        }
+
+        .search-bar {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+
+        .profile-icon {
+            position: absolute;
+            top: 40px; /* Adjust the distance from the top */
+            right: 20px; /* Adjust the distance from the right */
+            width: 40px; /* Set the width of the profile icon */
+            height: 40px; /* Set the height of the profile icon */
+            border-radius: 50%; /* Make the profile icon round */
+            overflow: hidden; /* Hide overflowing content */
+            cursor: pointer; /* Change cursor to pointer */
+        }
+
+        .profile-icon img {
+            width: 100%; /* Make sure the image covers the whole container */
+            height: auto; /* Maintain aspect ratio */
+        }
+
+        nav {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 5px;
+            background-color: #005a9e;
+        }
+
+        section {
+            text-align: center;
+            padding: 50px;
+        }
+
+        footer {
+            background-color: #0074cc;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .profile-button {
+            margin-top: 20px; /* Adjust margin from top */
+        }
+        .button-container {
+            position: relative;
+            display: inline-block;
+          }
+          .panel {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #f0f0f0;
+            width: 250px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            z-index: 1;
+          }
+          .button-container:hover .panel {
+            display: block;
+            color:black;
+          }
+          .button {
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+          }
+          .category {
+            margin-bottom: 10px;
+          }
+          .image-grid {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px; /* Adjust the gap between images */
+        }
+
+        .image-item img {
+            max-width: 100%;
+            height: auto;
+        
+      
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Virtual Bargain</h1>
+        <!-- Search bar -->
+        <div class="search-bar">
+            <input type="text" placeholder="Search...">
+            <button type="submit">Search</button>
+        </div>
+        <!-- Profile icon as button -->
+        <button><a href="myprofile.html" class="profile-icon"></button>
+            <img src="profile-picture.jpg" alt="Profile Picture">
+        </a>
+    </header>
+
+    <nav>
+        <a href="wishlist.html">Wishlist</a>
+        <div class="button-container">
+            <button class="button">View Categories</button>
+            <div class="panel">
+              <a href="category.html"><div class="category">OUTFITS</div></a>
+              <div class="category">COSMETICS</div>
+              <div class="category">FOOTWARE </div>
+              <div class="category">FOOD </div>
+              <div class="category">GROCERIES</div>
+              <div class="category">MEDICATIONS</div>
+            </div>
+        
+         <!-- Updated href attribute -->
+        <a href="notification.html">Notifications</a> <!-- Updated href attribute -->
+    </nav>
+
+    <section>
+        <!-- Your main content goes here -->
+        <p>Welcome to your home page!</p>
+    </section>
+    <section>
+        <h2>Our Gallery</h2>
+        <div class="image-grid">
+            <div class="image-item">
+                <a href="https://images.app.goo.gl/54FgzGpbYNkWUwHX7"></a>
+            </div>
+            <div class="image-item">
+                <img src="image2.jpg" alt="Image 2">
+            </div>
+            <div class="image-item">
+                <img src="image3.jpg" alt="Image 3">
+            </div>
+            <div class="image-item">
+                <img src="image4.jpg" alt="Image 4">
+            </div>
+            <!-- Add more image items as needed -->
+        </div>
+    </section>
+
+
+    <footer>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Contact Us</a>
+    </footer>
+</body>
+</html>
